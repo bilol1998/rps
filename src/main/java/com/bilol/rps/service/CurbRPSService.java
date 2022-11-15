@@ -15,6 +15,12 @@ public class CurbRPSService {
         this.restTemplate = restTemplate;
     }
 
+    /**
+     * Returns Throw response from curb api.
+     * These throw responses include only rock, paper, scissors
+     *
+     * @return Throw response from curb API
+     */
     public CurbThrowResponse retrieveThrow() throws RuntimeException {
         return restTemplate.getForObject(CURB_API, CurbThrowResponse.class);
     }
