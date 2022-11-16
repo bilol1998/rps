@@ -45,9 +45,9 @@ class RPSServiceTest {
         if (throwParam.equals(serversThrow)) {
             assertEquals(response.getResult(), ResultEnum.TIE, "Wrong Result Expected Tie");
         } else if (COMPARISON_MAP.get(throwParam).equals(serversThrow)) {
-            assertEquals(response.getResult(), ResultEnum.WIN, "Wrong Result Expected Win");
-        } else {
             assertEquals(response.getResult(), ResultEnum.LOSE, "Wrong Result Expected Lose");
+        } else {
+            assertEquals(response.getResult(), ResultEnum.WIN, "Wrong Result Expected Win");
         }
     }
 

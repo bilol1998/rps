@@ -18,4 +18,8 @@ public final class Constants {
     );
 
     public static final String CURB_API = "https://5eddt4q9dk.execute-api.us-east-1.amazonaws.com/rps-stage/throw";
+
+    //Endpoint Related Constants
+    public static final String BASE_URL = "/api/v1";
+    public static final String RPS = BASE_URL + "/rps";
 }

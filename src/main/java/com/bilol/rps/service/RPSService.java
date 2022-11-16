@@ -4,6 +4,7 @@ import com.bilol.rps.dto.CurbThrowResponse;
 import com.bilol.rps.dto.ThrowResponse;
 import com.bilol.rps.enums.ResultEnum;
 import com.bilol.rps.enums.ThrowsEnum;
+import com.bilol.rps.exception.BadRequestException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -31,7 +32,7 @@ public class RPSService {
      */
     public ThrowResponse getAndCompareServersThrow(ThrowsEnum throwsEnum) {
         if (!THROWS.contains(throwsEnum)) {
-            throw new RuntimeException();
+            throw new BadRequestException("Invalid Throw");
         }
         ThrowsEnum serversThrow = getServersThrow();
 
@@ -40,9 +41,9 @@ public class RPSService {
         if (throwsEnum.equals(serversThrow)) {
             response.setResult(ResultEnum.TIE);
         } else if (COMPARISON_MAP.get(throwsEnum).equals(serversThrow)) {
-            response.setResult(ResultEnum.WIN);
-        } else {
             response.setResult(ResultEnum.LOSE);
+        } else {
+            response.setResult(ResultEnum.WIN);
         }
         return response;
     }
