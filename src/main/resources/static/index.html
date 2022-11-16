@@ -2,9 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Rock - Paper - Scissors</title>
+
+    <link href="assets/style.css" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello world</h1>
+<div class="App">
+    <div class="container">
+        <div class="description">
+            <h1>ROCK – PAPER – SCISSORS</h1>
+            <p>Rock Paper Scissors is a zero sum game that is usually played by two people using their hands and
+                no tools. The idea is to make shapes with an outstretched hand where each shape will have a
+                certain degree of power and will lead to an outcome.</p>
+        </div>
+        <div class="throws">
+            <h2 class="throws__title">Select Your throw</h2>
+            <div class="throws__containers" id="throw-items">
+                <div class="throw__items">
+                    <button class="throw__item">
+                        <div class="throw__img">
+                            <img src="assets/rock.svg" alt="">
+                        </div>
+                        <h3>Rock</h3>
+                    </button>
+                    <button class="throw__item">
+                        <div class="throw__img">
+                            <img src="assets/paper.svg" alt="">
+                        </div>
+                        <h3>Paper</h3>
+                    </button>
+                    <button class="throw__item">
+                        <div class="throw__img">
+                            <img src="assets/scissors.svg" alt="">
+                        </div>
+                        <h3>Scissors</h3>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/main.js"></script>
 </body>
 </html>
